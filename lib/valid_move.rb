@@ -6,5 +6,5 @@ end
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 
 def valid_move?(board, index)
-  position_taken?(board, index) || (0..8).none?(index) ? true : false
+  position_taken?(board, index) || [0..8].none?{|i| i == index} ? true : false
 end
